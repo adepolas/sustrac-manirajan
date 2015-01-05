@@ -1,0 +1,4 @@
+- Lancer : git clone https://github.com/adepolas/sustrac-manirajan.git
+- Une fois le dossier crée, se placer dans le dossier 
+- Lancer la commande : rails server
+- Ouvrir le navigateur sur http://localhost:3000
