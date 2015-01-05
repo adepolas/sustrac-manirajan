@@ -1,0 +1,34 @@
+<div class='produit' style='margin:10%'>
+	<h2>
+	  <strong> Fiche produit :</strong>
+	  <%= @product.brand.name%> <%= @product.model %>
+	</h2>
+	
+	<p style="text-align: right">
+		<b> Description : </b>
+		<%= @product.description %>
+	</p> 
+	
+	<p>
+	  <strong>Prix:</strong>
+	  <%= @product.price %>
+	</p>
+	
+	<p> <b> Stock : </b>
+		<% if @product.stock > 0 %>
+			<span style='color:green;'> <b> <%= @product.stock %>  disponible(s) </b> </span> 
+		</p>
+		<% else %>
+		<span style='color:red;'> <b> Indisponible  </b> </span> </p>
+		<% end %>
+	<p>
+	  <strong>Marque:</strong>
+	  <%= @product.brand.name %>
+	</p>
+	
+	
+<%= link_to 'Retour', allproducts_path %>
+
+</div>
+
+

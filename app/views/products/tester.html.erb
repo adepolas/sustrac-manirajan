@@ -1,0 +1,20 @@
+<h1> Tous les produits </h1>
+
+
+    <% @products.each do |product| %>
+	
+	<a href="/allproducts/<%=product.id%>.html">
+	<div class='unProduit' style='background-color:rgb(229, 229, 229);padding:15px;margin:25px;width:500px;height:140px; border-radius: 10px;' >    
+      <h3> Mod&egrave;le : <span style="color:rgb(224, 16, 150);"> <%= product.model %> </span> </h3>
+      
+      <p>
+      <b> Description : </b>
+      <% (0..100).each do |i| %><%=product.description[i]%><% end %>...
+      </p>
+       
+      <p style='color:navy;font-size:20px;text-align:right;'> <b> Prix : </b> <b> <%= product.price %> € </b> </p>
+    </div>
+    
+    </a>
+    
+    <% end %>
